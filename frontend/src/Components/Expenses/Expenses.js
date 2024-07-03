@@ -7,11 +7,13 @@ import IncomeItem from '../IncomeItem/IncomeItem';
 import ExpenseForm from './ExpenseForm';
 
 function Expenses() {
-    const {addIncome,expenses, getExpenses, deleteExpense, totalExpenses} = useGlobalContext()
+    const {expenses, getExpenses, deleteExpense, totalExpenses} = useGlobalContext()
 
     useEffect(() =>{
         getExpenses()
     }, [])
+
+
     return (
         <ExpenseStyled>
             <InnerLayout>
@@ -63,7 +65,7 @@ const ExpenseStyled = styled.div`
         span{
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--color-green);
+            color: red;
         }
     }
     .income-content{
